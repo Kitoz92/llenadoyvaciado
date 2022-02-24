@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta charset="utf-8"/>
+
+<!-- Bootstrap CSS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<!-- GEOGEBRA -->
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+
+</head>
+<body>
+
+<section class="container">
+	<div class="row mt-2">
+
+		<div class="col-md-12 mt-2">
+          <h4 class="feature-title text-center"><b>Actividad 2</b></h4>
+          <p class="grey-text text-center" align="justify"><b>Introducción: Para estas actividades no se trata de usar Álgebra o fórmulas, se trata de pensar todo en un contexto gráfico. </b></p>
+        </div>
+
+	</div>
+</section>
+
+
+<section class="container">
+              <div class="row mt-2">
+
+                <div class="col-md-6">
+                      <!-- <h6 class="feature-title text-center"><b>ACTIVIDAD 1</b></h6> -->
+                      <h6 class="feature-title text-center"><b>Vaciado de botella</b></h6>
+                      <p class="grey-text" align="justify">En esta actividad, vamos a investigar la Altura  y volumen del vaciado de la botella</p>
+                      <p class="grey-text" align="justify"><b>Nota:</b> Reproduzca el video para ver la animación</p>
+                      <p class="grey-text" align="justify"><b>1.</b> Bosqueje la gráfica de la <b>altura</b> del agua que hay en la botella en función del <b>volúmen</b> por el agua.</p>
+                      <!-- <p class="grey-text" align="justify"><b>Nota 2:</b> En cuanto hayas hecho la actividad anexar videos. fotos y todo lo que consideren necesario para explicar con detalle lo que hiciste en la actividad</p> -->            
+					<div>
+						<video src="vaciado.mp4" width=390  height=250 controls poster="57.jpg" class="center">
+					</div>
+				</div>
+
+                <div class="col-md-6">
+                     <div id="ggbApplet"></div>
+                </div>
+
+              </div>
+
+    </section>
+
+    <br>
+
+    <section>
+    	<div class="container" style="position: relative;">
+
+    		<a class="btn btn-info" style="width: 90px; height: 40px; position: absolute; position: absolute; top: 50%; left: 50%;">Siguiente</a>
+    	
+    	</div>
+    </section>
+
+    <!-- TABLA DE VALORES -->
+
+    <!-- <section class="container">
+              <div class="row mt-2">
+
+                <div class="col-md-12 mt-4">
+
+                    <div class="contenedor3">
+
+						<h4 align="center">Tabla de valores</h4>
+
+				    <form id="form-param">
+				    	<div class="container">
+				    	    <div>
+				    	        <input type="text" class="parametro text-center" value="x" placeholder="parametro" readonly><input type="text" class="parametro text-center" value="y" placeholder="parametro" readonly>
+				            </div>
+				    	    <div>
+				    	        <input type="text" class="parametro" value="P2" placeholder="parametro" readonly><input id="valor2" type="number" class="valor" placeholder="valor" value="">
+				            </div>
+				            <div>
+				    	        <input type="text" class="parametro" value="P3" placeholder="parametro" readonly><input id="valor3" type="number" class="valor" placeholder="valor" value="">
+				            </div>
+				            <div>
+				    	        <input type="text" class="parametro" value="P4" placeholder="parametro" readonly><input id="valor4" type="number" class="valor" placeholder="valor" value="">
+				            </div>
+				            <div>
+				    	        <input type="text" class="parametro" value="P5" placeholder="parametro" readonly><input id="valor5" type="number" class="valor" placeholder="valor" value="">
+				            </div>
+				            <div>
+				                <input type="hidden" class="parametro" value="P5" placeholder="parametro" readonly><input id="valor" type="hidden" class="valor" placeholder="valor">
+				            </div>
+				    	</div>
+				    	
+				    </form>
+
+				    <br>
+
+				    <div id="grafico" style="width:680px;height:345px"></div>
+
+				 </div>
+
+                 </div>
+
+                  
+
+                </div>
+
+
+ 
+              </div>
+    </section>
+
+<br><br><br><br><br><br><br><br><br> -->
+
+
+
+
+
+
+<script>
+var parameters = {
+"id": "ggbApplet",
+"width":600,
+"height":450,
+"showMenuBar":false,
+"showAlgebraInput":false,
+"showToolBar":true,
+"customToolBar":"62 |",
+"showToolBarHelp":false,
+"showResetIcon":false,
+"enableLabelDrags":false,
+"enableShiftDragZoom":false,
+"enableRightClick":false,
+"errorDialogsActive":false,
+"useBrowserForJS":false,
+"allowStyleBar":false,
+"preventFocus":false,
+"showZoomButtons":false,
+"capturingThreshold":3,
+// add code here to run when the applet starts
+"appletOnLoad":function(api){ /* api.evalCommand('Segment((1,2),(3,4))');*/ },
+"showFullscreenButton":false,
+"scale":1,
+"disableAutoScale":false,
+"allowUpscale":false,
+"clickToLoad":false,
+"appName":"classic",
+"buttonRounding":0.7,
+"buttonShadows":false,
+"language":"es",
+// use this instead of ggbBase64 to load a material from geogebra.org
+// "material_id":"RHYH3UQ8",
+// use this instead of ggbBase64 to load a .ggb file
+// "filename":"myfile.ggb",
+"ggbBase64":"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",
+};
+// is3D=is 3D applet using 3D view, AV=Algebra View, SV=Spreadsheet View, CV=CAS View, EV2=Graphics View 2, CP=Construction Protocol, PC=Probability Calculator DA=Data Analysis, FI=Function Inspector, macro=Macros
+var views = {'is3D': 0,'AV': 0,'SV': 0,'CV': 0,'EV2': 0,'CP': 1,'PC': 0,'DA': 0,'FI': 0,'macro': 0};
+var applet = new GGBApplet(parameters, '5.0', views);
+window.onload = function() {applet.inject('ggbApplet')};
+applet.setPreviewImage('data:image/gif;base64,R0lGODlhAQABAAAAADs=','https://www.geogebra.org/images/GeoGebra_loading.png','https://www.geogebra.org/images/applet_play.png');
+</script>
+</body>
+</html>
